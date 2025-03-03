@@ -1,13 +1,13 @@
 <div class="container">
 	<div class="top-bar">
-		<!-- More icon -->
-		<div class="top-bar__more icon">
+		<!-- More -->
+		<button class="top-bar__more js-toggle icon" toggle-target="#navbar">
 			<img
 				src="./assets/icons/more.svg"
-				alt="more"
+				alt=""
 				class="top-bar__more-icon"
 			/>
-		</div>
+		</button>
 		<!-- Logo -->
 		<a href="./" class="logo">
 			<img
@@ -19,9 +19,39 @@
 		</a>
 
 		<!-- Navbar -->
-		<nav class="navbar">
-			<ul class="navbar__list">
-				<li>
+		<nav id="navbar" class="navbar show">
+			<!-- Arrow back -->
+			<button
+				class="navbar__close-btn js-toggle icon"
+				toggle-target="#navbar"
+			>
+				<img src="./assets/icons/arrow-left-navbar.svg" alt="" />
+			</button>
+
+			<a href="#!" class="nav-btn d-none d-md-flex icon">
+				<img
+					src="./assets/icons/buy.svg"
+					alt=""
+					class="nav-btn__icon"
+				/>
+				<span class="nav-btn__title">Card</span>
+				<span class="nav-btn__qnt">3</span>
+			</a>
+
+			<a href="#!" class="nav-btn d-none d-md-flex icon">
+				<img
+					src="./assets/icons/heart.svg"
+					alt=""
+					class="nav-btn__icon"
+				/>
+				<span class="nav-btn__title">Favorite</span>
+				<span class="nav-btn__qnt">3</span>
+			</a>
+
+			<!-- Navbar list -->
+			<ul class="navbar__list js-dropdown-list">
+				<!-- Item 1 -->
+				<li class="navbar__item">
 					<a href="#!" class="navbar__link">
 						Departments
 						<img
@@ -30,8 +60,741 @@
 							class="navbar__arrow icon"
 						/>
 					</a>
+					<!-- Dropdown -->
+					<div class="dropdown js-dropdown">
+						<div class="dropdown__inner">
+							<div class="top-menu">
+								<!-- Main menu -->
+								<div class="top-menu__main">
+									<!-- Main column -->
+									<div class="main-column">
+										<!-- Icon -->
+										<div
+											class="main-column__icon main-column__icon-main"
+										>
+											<img
+												src="./assets/img/category/cate-1.1.svg"
+												alt=""
+												class="main-column__icon-1"
+											/>
+											<img
+												src="./assets/img/category/cate-1.2.svg"
+												alt=""
+												class="main-column__icon-2"
+											/>
+										</div>
+										<!-- Content -->
+										<div class="main-column__content">
+											<h2
+												class="main-column__heading d-lg-none"
+											>
+												All Departments
+											</h2>
+											<!-- List -->
+											<ul
+												class="main-column__list js-menu-list"
+											>
+												<li class="main-column__item">
+													<a
+														href="#!"
+														class="main-column__link"
+														>Savings & Featured
+														Shops</a
+													>
+													<!-- Sub menu -->
+													<div class="sub-menu">
+														<!-- Sub menu column 1 -->
+														<div
+															class="sub-menu__column"
+														>
+															<!-- Main column 1.1 -->
+															<div
+																class="main-column"
+															>
+																<!-- Icon -->
+																<div
+																	class="main-column__icon"
+																>
+																	<img
+																		src="./assets/img/category/cate-2.1.svg"
+																		alt=""
+																		class="main-column__icon-1"
+																	/>
+																	<img
+																		src="./assets/img/category/cate-2.2.svg"
+																		alt=""
+																		class="main-column__icon-2"
+																	/>
+																</div>
+																<!-- Content -->
+																<div
+																	class="main-column__content"
+																>
+																	<h2
+																		class="main-column__heading"
+																	>
+																		TV &
+																		Video
+																	</h2>
+																	<!-- List -->
+																	<ul
+																		class="main-column__list"
+																	>
+																		<li
+																			class="main-column__item"
+																		>
+																			<a
+																				href="#!"
+																				class="main-column__link"
+																			>
+																				Shop
+																				all
+																				TVs
+																			</a>
+																		</li>
+																		<li
+																			class="main-column__item"
+																		>
+																			<a
+																				href="#!"
+																				class="main-column__link"
+																			>
+																				TVs
+																				by
+																				Size
+																			</a>
+																		</li>
+																		<li
+																			class="main-column__item"
+																		>
+																			<a
+																				href="#!"
+																				class="main-column__link"
+																			>
+																				Smart
+																				TVs
+																			</a>
+																		</li>
+																		<li
+																			class="main-column__item"
+																		>
+																			<a
+																				href="#!"
+																				class="main-column__link"
+																			>
+																				Roku
+																				TVs
+																			</a>
+																		</li>
+																		<li
+																			class="main-column__item"
+																		>
+																			<a
+																				href="#!"
+																				class="main-column__link"
+																			>
+																				Streaming
+																			</a>
+																		</li>
+																		<li
+																			class="main-column__item"
+																		>
+																			<a
+																				href="#!"
+																				class="main-column__link"
+																			>
+																				TV
+																				Mounts
+																				&
+																				Accessories
+																			</a>
+																		</li>
+																		<li
+																			class="main-column__item"
+																		>
+																			<a
+																				href="#!"
+																				class="main-column__link"
+																			>
+																				DVD
+																				&
+																				Blu-Ray
+																				Players
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+															<!-- Main column 1.2 -->
+															<div
+																class="main-column"
+															>
+																<!-- Icon -->
+																<div
+																	class="main-column__icon"
+																>
+																	<img
+																		src="./assets/img/category/cate-3.1.svg"
+																		alt=""
+																		class="main-column__icon-1"
+																	/>
+																	<img
+																		src="./assets/img/category/cate-3.2.svg"
+																		alt=""
+																		class="main-column__icon-2"
+																	/>
+																</div>
+																<!-- Content -->
+																<div
+																	class="main-column__content"
+																>
+																	<h2
+																		class="main-column__heading"
+																	>
+																		Wearable
+																		Technology
+																	</h2>
+																	<!-- List -->
+																	<ul
+																		class="main-column__list"
+																	>
+																		<li
+																			class="main-column__item"
+																		>
+																			<a
+																				href="#!"
+																				class="main-column__link"
+																			>
+																				Galaxy
+																				Watch
+																			</a>
+																		</li>
+																		<li
+																			class="main-column__item"
+																		>
+																			<a
+																				href="#!"
+																				class="main-column__link"
+																			>
+																				Apple
+																				Watch
+																			</a>
+																		</li>
+																		<li
+																			class="main-column__item"
+																		>
+																			<a
+																				href="#!"
+																				class="main-column__link"
+																			>
+																				Fitness
+																				Trackers
+																			</a>
+																		</li>
+																		<li
+																			class="main-column__item"
+																		>
+																			<a
+																				href="#!"
+																				class="main-column__link"
+																			>
+																				Virtual
+																				Reality
+																			</a>
+																		</li>
+																		<li
+																			class="main-column__item"
+																		>
+																			<a
+																				href="#!"
+																				class="main-column__link"
+																			>
+																				Headphones
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+														<!-- Sub menu column 2-->
+														<div
+															class="sub-menu__column"
+														>
+															<!-- Main column 2.1 -->
+															<div
+																class="main-column"
+															>
+																<!-- Icon -->
+																<div
+																	class="main-column__icon"
+																>
+																	<img
+																		src="./assets/img/category/cate-3.1.svg"
+																		alt=""
+																		class="main-column__icon-1"
+																	/>
+																	<img
+																		src="./assets/img/category/cate-3.2.svg"
+																		alt=""
+																		class="main-column__icon-2"
+																	/>
+																</div>
+																<!-- Content -->
+																<div
+																	class="main-column__content"
+																>
+																	<h2
+																		class="main-column__heading"
+																	>
+																		Computers
+																	</h2>
+																	<!-- List -->
+																	<ul
+																		class="main-column__list"
+																	>
+																		<li
+																			class="main-column__item"
+																		>
+																			<a
+																				href="#!"
+																				class="main-column__link"
+																			>
+																				Shop
+																				All
+																				Computers
+																			</a>
+																		</li>
+																		<li
+																			class="main-column__item"
+																		>
+																			<a
+																				href="#!"
+																				class="main-column__link"
+																				>Laptops
+																			</a>
+																		</li>
+																		<li
+																			class="main-column__item"
+																		>
+																			<a
+																				href="#!"
+																				class="main-column__link"
+																			>
+																				PC
+																				Gaming
+																			</a>
+																		</li>
+																		<li
+																			class="main-column__item"
+																		>
+																			<a
+																				href="#!"
+																				class="main-column__link"
+																			>
+																				Monitors
+																			</a>
+																		</li>
+																		<li
+																			class="main-column__item"
+																		>
+																			<a
+																				href="#!"
+																				class="main-column__link"
+																			>
+																				Chromebook
+																			</a>
+																		</li>
+																		<li
+																			class="main-column__item"
+																		>
+																			<a
+																				href="#!"
+																				class="main-column__link"
+																			>
+																				Printers
+																				&
+																				Ink
+																			</a>
+																		</li>
+																		<li
+																			class="main-column__item"
+																		>
+																			<a
+																				href="#!"
+																				class="main-column__link"
+																			>
+																				Shop
+																				all
+																				TVs
+																			</a>
+																		</li>
+																		<li
+																			class="main-column__item"
+																		>
+																			<a
+																				href="#!"
+																				class="main-column__link"
+																			>
+																				Computer
+																				Accessories
+																			</a>
+																		</li>
+																		<li
+																			class="main-column__item"
+																		>
+																			<a
+																				href="#!"
+																				class="main-column__link"
+																			>
+																				Desktops
+																			</a>
+																		</li>
+																		<li
+																			class="main-column__item"
+																		>
+																			<a
+																				href="#!"
+																				class="main-column__link"
+																			>
+																				Tax
+																				Software
+																			</a>
+																		</li>
+																		<li
+																			class="main-column__item"
+																		>
+																			<a
+																				href="#!"
+																				class="main-column__link"
+																			>
+																				Computer
+																				Software
+																			</a>
+																		</li>
+																		<li
+																			class="main-column__item"
+																		>
+																			<a
+																				href="#!"
+																				class="main-column__link"
+																			>
+																				PC
+																				Finder
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+														<!-- Sub menu column 3 -->
+														<div
+															class="sub-menu__column"
+														>
+															<!-- Main column 1.1 -->
+															<div
+																class="main-column"
+															>
+																<!-- Icon -->
+																<div
+																	class="main-column__icon"
+																>
+																	<img
+																		src="./assets/img/category/cate-4.1.svg"
+																		alt=""
+																		class="main-column__icon-1"
+																	/>
+																	<img
+																		src="./assets/img/category/cate-4.2.svg"
+																		alt=""
+																		class="main-column__icon-2"
+																	/>
+																</div>
+																<!-- Content -->
+																<div
+																	class="main-column__content"
+																>
+																	<h2
+																		class="main-column__heading"
+																	>
+																		Savings
+																	</h2>
+																	<!-- List -->
+																	<ul
+																		class="main-column__list"
+																	>
+																		<li
+																			class="main-column__item"
+																		>
+																			<a
+																				href="#!"
+																				class="main-column__link"
+																				>Tech
+																				Savings</a
+																			>
+																		</li>
+																		<li
+																			class="main-column__item"
+																		>
+																			<a
+																				href="#!"
+																				class="main-column__link"
+																				>Overstock
+																				Savings</a
+																			>
+																		</li>
+																		<li
+																			class="main-column__item"
+																		>
+																			<a
+																				href="#!"
+																				class="main-column__link"
+																			>
+																				Tech
+																				Rollbacks
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+															<!-- Main column 1.2 -->
+															<div
+																class="main-column"
+															>
+																<!-- Icon -->
+																<div
+																	class="main-column__icon"
+																>
+																	<img
+																		src="./assets/img/category/cate-5.1.svg"
+																		alt=""
+																		class="main-column__icon-1"
+																	/>
+																	<img
+																		src="./assets/img/category/cate-5.2.svg"
+																		alt=""
+																		class="main-column__icon-2"
+																	/>
+																</div>
+																<!-- Content -->
+																<div
+																	class="main-column__content"
+																>
+																	<h2
+																		class="main-column__heading"
+																	>
+																		Cell
+																		Phones
+																	</h2>
+																	<!-- List -->
+																	<ul
+																		class="main-column__list"
+																	>
+																		<li
+																			class="main-column__item"
+																		>
+																			<a
+																				href="#!"
+																				class="main-column__link"
+																				>Wireless
+																				Deals</a
+																			>
+																		</li>
+																		<li
+																			class="main-column__item"
+																		>
+																			<a
+																				href="#!"
+																				class="main-column__link"
+																				>5G
+																				Phones
+																			</a>
+																		</li>
+																		<li
+																			class="main-column__item"
+																		>
+																			<a
+																				href="#!"
+																				class="main-column__link"
+																			>
+																				Prepaid
+																				Phones
+																				&
+																				Plans
+																			</a>
+																		</li>
+																		<li
+																			class="main-column__item"
+																		>
+																			<a
+																				href="#!"
+																				class="main-column__link"
+																			>
+																				Refurbished
+																				Phones
+																			</a>
+																		</li>
+																		<li
+																			class="main-column__item"
+																		>
+																			<a
+																				href="#!"
+																				class="main-column__link"
+																			>
+																				iPhone
+																				Accessories
+																			</a>
+																		</li>
+																		<li
+																			class="main-column__item"
+																		>
+																			<a
+																				href="#!"
+																				class="main-column__link"
+																			>
+																				Cases
+																				&
+																				Screen
+																				Protectors
+																			</a>
+																		</li>
+																		<li
+																			class="main-column__item"
+																		>
+																			<a
+																				href="#!"
+																				class="main-column__link"
+																			>
+																				Walmart
+																				Protection
+																				Plan
+																			</a>
+																		</li>
+																		<li
+																			class="main-column__item"
+																		>
+																			<a
+																				href="#!"
+																				class="main-column__link"
+																			>
+																				Unlocked
+																				Phones
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li class="main-column__item">
+													<a
+														href="#!"
+														class="main-column__link"
+														>Electronics</a
+													>
+												</li>
+												<li class="main-column__item">
+													<a
+														href="#!"
+														class="main-column__link"
+													>
+														Clothing, Shoes &
+														Accessories
+													</a>
+												</li>
+												<li class="main-column__item">
+													<a
+														href="#!"
+														class="main-column__link"
+													>
+														Home, Furniture &
+														Appliances
+													</a>
+												</li>
+												<li class="main-column__item">
+													<a
+														href="#!"
+														class="main-column__link"
+														>Toys & Video Games</a
+													>
+												</li>
+												<li class="main-column__item">
+													<a
+														href="#!"
+														class="main-column__link"
+														>Home Improvement</a
+													>
+												</li>
+												<li class="main-column__item">
+													<a
+														href="#!"
+														class="main-column__link"
+														>Baby</a
+													>
+												</li>
+												<li class="main-column__item">
+													<a
+														href="#!"
+														class="main-column__link"
+														>Household Essentials</a
+													>
+												</li>
+												<li class="main-column__item">
+													<a
+														href="#!"
+														class="main-column__link"
+														>Personal Care</a
+													>
+												</li>
+												<li class="main-column__item">
+													<a
+														href="#!"
+														class="main-column__link"
+														>Patio & Garden</a
+													>
+												</li>
+												<li class="main-column__item">
+													<a
+														href="#!"
+														class="main-column__link"
+														>Sports & Outdoors</a
+													>
+												</li>
+												<li class="main-column__item">
+													<a
+														href="#!"
+														class="main-column__link"
+														>Gift Cards</a
+													>
+												</li>
+												<li class="main-column__item">
+													<a
+														href="#!"
+														class="main-column__link"
+													>
+														Auto, Tires and
+														Industrial
+													</a>
+												</li>
+
+												<li class="main-column__item">
+													<a
+														href="#!"
+														class="main-column__link"
+														>Movies, Music &
+														Books</a
+													>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</li>
-				<li>
+				<!--Item 2-->
+				<li class="navbar__item">
 					<a href="#!" class="navbar__link">
 						Grocery
 						<img
@@ -40,8 +803,681 @@
 							class="navbar__arrow icon"
 						/>
 					</a>
+					<!-- Dropdown -->
+					<div class="dropdown js-dropdown">
+						<div class="dropdown__inner">
+							<div class="top-menu">
+								<!-- Sub menu -->
+								<div class="sub-menu sub-menu--not_main">
+									<!-- Sub menu column 1 -->
+									<div class="sub-menu__column">
+										<!-- Main column 1.1 -->
+										<div class="main-column">
+											<!-- Icon -->
+											<div class="main-column__icon">
+												<img
+													src="./assets/img/category/cate-2.1.svg"
+													alt=""
+													class="main-column__icon-1"
+												/>
+												<img
+													src="./assets/img/category/cate-2.2.svg"
+													alt=""
+													class="main-column__icon-2"
+												/>
+											</div>
+											<!-- Content -->
+											<div class="main-column__content">
+												<h2
+													class="main-column__heading"
+												>
+													TV & Video
+												</h2>
+												<!-- List -->
+												<ul class="main-column__list">
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Shop all TVs
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															TVs by Size
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Smart TVs
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Roku TVs
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Streaming
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															TV Mounts &
+															Accessories
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															DVD & Blu-Ray
+															Players
+														</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<!-- Main column 1.2 -->
+										<div class="main-column">
+											<!-- Icon -->
+											<div class="main-column__icon">
+												<img
+													src="./assets/img/category/cate-3.1.svg"
+													alt=""
+													class="main-column__icon-1"
+												/>
+												<img
+													src="./assets/img/category/cate-3.2.svg"
+													alt=""
+													class="main-column__icon-2"
+												/>
+											</div>
+											<!-- Content -->
+											<div class="main-column__content">
+												<h2
+													class="main-column__heading"
+												>
+													Wearable Technology
+												</h2>
+												<!-- List -->
+												<ul class="main-column__list">
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Galaxy Watch
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Apple Watch
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Fitness Trackers
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Virtual Reality
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Headphones
+														</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<!-- Sub menu column 2-->
+									<div class="sub-menu__column">
+										<!-- Main column 2.1 -->
+										<div class="main-column">
+											<!-- Icon -->
+											<div class="main-column__icon">
+												<img
+													src="./assets/img/category/cate-3.1.svg"
+													alt=""
+													class="main-column__icon-1"
+												/>
+												<img
+													src="./assets/img/category/cate-3.2.svg"
+													alt=""
+													class="main-column__icon-2"
+												/>
+											</div>
+											<!-- Content -->
+											<div class="main-column__content">
+												<h2
+													class="main-column__heading"
+												>
+													Computers
+												</h2>
+												<!-- List -->
+												<ul class="main-column__list">
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Shop All Computers
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+															>Laptops
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															PC Gaming
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Monitors
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Chromebook
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Printers & Ink
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Shop all TVs
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Computer Accessories
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Desktops
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Tax Software
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Computer Software
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															PC Finder
+														</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<!-- Sub menu column 3 -->
+									<div class="sub-menu__column">
+										<!-- Main column 1.1 -->
+										<div class="main-column">
+											<!-- Icon -->
+											<div class="main-column__icon">
+												<img
+													src="./assets/img/category/cate-4.1.svg"
+													alt=""
+													class="main-column__icon-1"
+												/>
+												<img
+													src="./assets/img/category/cate-4.2.svg"
+													alt=""
+													class="main-column__icon-2"
+												/>
+											</div>
+											<!-- Content -->
+											<div class="main-column__content">
+												<h2
+													class="main-column__heading"
+												>
+													Savings
+												</h2>
+												<!-- List -->
+												<ul class="main-column__list">
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+															>Tech Savings</a
+														>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+															>Overstock
+															Savings</a
+														>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Tech Rollbacks
+														</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<!-- Main column 1.2 -->
+										<div class="main-column">
+											<!-- Icon -->
+											<div class="main-column__icon">
+												<img
+													src="./assets/img/category/cate-5.1.svg"
+													alt=""
+													class="main-column__icon-1"
+												/>
+												<img
+													src="./assets/img/category/cate-5.2.svg"
+													alt=""
+													class="main-column__icon-2"
+												/>
+											</div>
+											<!-- Content -->
+											<div class="main-column__content">
+												<h2
+													class="main-column__heading"
+												>
+													Cell Phones
+												</h2>
+												<!-- List -->
+												<ul class="main-column__list">
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+															>Wireless Deals</a
+														>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+															>5G Phones
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Prepaid Phones &
+															Plans
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Refurbished Phones
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															iPhone Accessories
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Cases & Screen
+															Protectors
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Walmart Protection
+															Plan
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Unlocked Phones
+														</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<!-- Sub menu column 4 -->
+									<div class="sub-menu__column">
+										<!-- Main column 1.1 -->
+										<div class="main-column">
+											<!-- Icon -->
+											<div class="main-column__icon">
+												<img
+													src="./assets/img/category/cate-4.1.svg"
+													alt=""
+													class="main-column__icon-1"
+												/>
+												<img
+													src="./assets/img/category/cate-4.2.svg"
+													alt=""
+													class="main-column__icon-2"
+												/>
+											</div>
+											<!-- Content -->
+											<div class="main-column__content">
+												<h2
+													class="main-column__heading"
+												>
+													Savings
+												</h2>
+												<!-- List -->
+												<ul class="main-column__list">
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+															>Tech Savings</a
+														>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+															>Overstock
+															Savings</a
+														>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Tech Rollbacks
+														</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<!-- Main column 1.2 -->
+										<div class="main-column">
+											<!-- Icon -->
+											<div class="main-column__icon">
+												<img
+													src="./assets/img/category/cate-5.1.svg"
+													alt=""
+													class="main-column__icon-1"
+												/>
+												<img
+													src="./assets/img/category/cate-5.2.svg"
+													alt=""
+													class="main-column__icon-2"
+												/>
+											</div>
+											<!-- Content -->
+											<div class="main-column__content">
+												<h2
+													class="main-column__heading"
+												>
+													Cell Phones
+												</h2>
+												<!-- List -->
+												<ul class="main-column__list">
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+															>Wireless Deals</a
+														>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+															>5G Phones
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Prepaid Phones &
+															Plans
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Refurbished Phones
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															iPhone Accessories
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Cases & Screen
+															Protectors
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Walmart Protection
+															Plan
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Unlocked Phones
+														</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</li>
-				<li>
+				<!-- Item 3 -->
+				<li class="navbar__item">
 					<a href="#!" class="navbar__link">
 						Beauty
 						<img
@@ -50,9 +1486,684 @@
 							class="navbar__arrow icon"
 						/>
 					</a>
+
+					<!-- Dropdown -->
+					<div class="dropdown js-dropdown">
+						<div class="dropdown__inner">
+							<div class="top-menu">
+								<!-- Sub menu -->
+								<div class="sub-menu sub-menu--not_main">
+									<!-- Sub menu column 1 -->
+									<div class="sub-menu__column">
+										<!-- Main column 1.1 -->
+										<div class="main-column">
+											<!-- Icon -->
+											<div class="main-column__icon">
+												<img
+													src="./assets/img/category/cate-2.1.svg"
+													alt=""
+													class="main-column__icon-1"
+												/>
+												<img
+													src="./assets/img/category/cate-2.2.svg"
+													alt=""
+													class="main-column__icon-2"
+												/>
+											</div>
+											<!-- Content -->
+											<div class="main-column__content">
+												<h2
+													class="main-column__heading"
+												>
+													TV & Video
+												</h2>
+												<!-- List -->
+												<ul class="main-column__list">
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Shop all TVs
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															TVs by Size
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Smart TVs
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Roku TVs
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Streaming
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															TV Mounts &
+															Accessories
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															DVD & Blu-Ray
+															Players
+														</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<!-- Main column 1.2 -->
+										<div class="main-column">
+											<!-- Icon -->
+											<div class="main-column__icon">
+												<img
+													src="./assets/img/category/cate-3.1.svg"
+													alt=""
+													class="main-column__icon-1"
+												/>
+												<img
+													src="./assets/img/category/cate-3.2.svg"
+													alt=""
+													class="main-column__icon-2"
+												/>
+											</div>
+											<!-- Content -->
+											<div class="main-column__content">
+												<h2
+													class="main-column__heading"
+												>
+													Wearable Technology
+												</h2>
+												<!-- List -->
+												<ul class="main-column__list">
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Galaxy Watch
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Apple Watch
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Fitness Trackers
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Virtual Reality
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Headphones
+														</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<!-- Sub menu column 2-->
+									<div class="sub-menu__column">
+										<!-- Main column 2.1 -->
+										<div class="main-column">
+											<!-- Icon -->
+											<div class="main-column__icon">
+												<img
+													src="./assets/img/category/cate-3.1.svg"
+													alt=""
+													class="main-column__icon-1"
+												/>
+												<img
+													src="./assets/img/category/cate-3.2.svg"
+													alt=""
+													class="main-column__icon-2"
+												/>
+											</div>
+											<!-- Content -->
+											<div class="main-column__content">
+												<h2
+													class="main-column__heading"
+												>
+													Computers
+												</h2>
+												<!-- List -->
+												<ul class="main-column__list">
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Shop All Computers
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+															>Laptops
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															PC Gaming
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Monitors
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Chromebook
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Printers & Ink
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Shop all TVs
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Computer Accessories
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Desktops
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Tax Software
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Computer Software
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															PC Finder
+														</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<!-- Sub menu column 3 -->
+									<div class="sub-menu__column">
+										<!-- Main column 1.1 -->
+										<div class="main-column">
+											<!-- Icon -->
+											<div class="main-column__icon">
+												<img
+													src="./assets/img/category/cate-4.1.svg"
+													alt=""
+													class="main-column__icon-1"
+												/>
+												<img
+													src="./assets/img/category/cate-4.2.svg"
+													alt=""
+													class="main-column__icon-2"
+												/>
+											</div>
+											<!-- Content -->
+											<div class="main-column__content">
+												<h2
+													class="main-column__heading"
+												>
+													Savings
+												</h2>
+												<!-- List -->
+												<ul class="main-column__list">
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+															>Tech Savings</a
+														>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+															>Overstock
+															Savings</a
+														>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Tech Rollbacks
+														</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<!-- Main column 1.2 -->
+										<div class="main-column">
+											<!-- Icon -->
+											<div class="main-column__icon">
+												<img
+													src="./assets/img/category/cate-5.1.svg"
+													alt=""
+													class="main-column__icon-1"
+												/>
+												<img
+													src="./assets/img/category/cate-5.2.svg"
+													alt=""
+													class="main-column__icon-2"
+												/>
+											</div>
+											<!-- Content -->
+											<div class="main-column__content">
+												<h2
+													class="main-column__heading"
+												>
+													Cell Phones
+												</h2>
+												<!-- List -->
+												<ul class="main-column__list">
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+															>Wireless Deals</a
+														>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+															>5G Phones
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Prepaid Phones &
+															Plans
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Refurbished Phones
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															iPhone Accessories
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Cases & Screen
+															Protectors
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Walmart Protection
+															Plan
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Unlocked Phones
+														</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<!-- Sub menu column 4 -->
+									<div class="sub-menu__column">
+										<!-- Main column 1.1 -->
+										<div class="main-column">
+											<!-- Icon -->
+											<div class="main-column__icon">
+												<img
+													src="./assets/img/category/cate-4.1.svg"
+													alt=""
+													class="main-column__icon-1"
+												/>
+												<img
+													src="./assets/img/category/cate-4.2.svg"
+													alt=""
+													class="main-column__icon-2"
+												/>
+											</div>
+											<!-- Content -->
+											<div class="main-column__content">
+												<h2
+													class="main-column__heading"
+												>
+													Savings
+												</h2>
+												<!-- List -->
+												<ul class="main-column__list">
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+															>Tech Savings</a
+														>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+															>Overstock
+															Savings</a
+														>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Tech Rollbacks
+														</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<!-- Main column 1.2 -->
+										<div class="main-column">
+											<!-- Icon -->
+											<div class="main-column__icon">
+												<img
+													src="./assets/img/category/cate-5.1.svg"
+													alt=""
+													class="main-column__icon-1"
+												/>
+												<img
+													src="./assets/img/category/cate-5.2.svg"
+													alt=""
+													class="main-column__icon-2"
+												/>
+											</div>
+											<!-- Content -->
+											<div class="main-column__content">
+												<h2
+													class="main-column__heading"
+												>
+													Cell Phones
+												</h2>
+												<!-- List -->
+												<ul class="main-column__list">
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+															>Wireless Deals</a
+														>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+															>5G Phones
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Prepaid Phones &
+															Plans
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Refurbished Phones
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															iPhone Accessories
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Cases & Screen
+															Protectors
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Walmart Protection
+															Plan
+														</a>
+													</li>
+													<li
+														class="main-column__item"
+													>
+														<a
+															href="#!"
+															class="main-column__link"
+														>
+															Unlocked Phones
+														</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</li>
 			</ul>
 		</nav>
+		<!--Overlay -->
+		<div class="navbar__overlay js-toggle" toggle-target="#navbar"></div>
 
 		<!-- Actions -->
 		<div class="top-act">

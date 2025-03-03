@@ -1,0 +1,174 @@
+@use "../abstracts";
+
+.dropdown {
+	width: min(1240px, 100%);
+	padding-top: 54px;
+	position: absolute;
+	left: 0;
+	display: none;
+
+	@include abstracts.screen(lg) {
+		position: initial;
+		padding-top: 0;
+	}
+
+	.dropdown__inner {
+		--inner-padding: 30px;
+
+		position: relative;
+		padding: var(--inner-padding);
+		border-radius: 2rem;
+		background: var(--dropdown-inner-bg-color);
+		box-shadow: 0px 40px 90px 20px var(--dropdown-inner-shadown-bg);
+
+		@include abstracts.screen(lg) {
+			border-radius: 0;
+			background: transparent;
+			box-shadow: none;
+			padding: 0 40px;
+		}
+
+		@include abstracts.screen(sm) {
+			padding: 0 20px;
+		}
+
+		&::after {
+			content: url(../icons/dropdown-arrow.svg);
+			position: absolute;
+			top: -15px;
+			left: var(--arrow-left-pos);
+			translate: -50%;
+			filter: var(--dropdown-arrow-icon-bg);
+
+			@include abstracts.screen(lg) {
+				content: none;
+			}
+		}
+	}
+}
+
+.top-menu {
+	--max-inner-height: calc(
+		min(582px, 100vh - 158px) - var(--inner-padding) * 2
+	);
+
+	position: relative;
+
+	&__main {
+		width: 292px;
+		height: var(--max-inner-height);
+		border-right: 1px solid var(--top-menu-main-border-bg);
+		overflow-y: auto;
+
+		@include abstracts.screen(lg) {
+			width: 100%;
+			height: auto;
+			border-right: none;
+		}
+	}
+}
+
+.main-column {
+	display: flex;
+	column-gap: 14px;
+
+	&__icon {
+		position: relative;
+		width: 36px;
+		height: 36px;
+
+		@include abstracts.screen(xl) {
+			display: none;
+		}
+
+		@include abstracts.screen(lg) {
+			display: block;
+		}
+
+		&-main {
+			@include abstracts.screen(lg) {
+				display: none;
+			}
+		}
+	}
+
+	& + .main-column {
+		margin-top: 17px;
+	}
+
+	&__icon-2 {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		filter: var(--main-column-icon-color);
+	}
+
+	&__content {
+		flex: 1;
+	}
+
+	&__heading {
+		margin-top: 3px;
+		font-size: 1.6rem;
+		font-weight: 500;
+		line-height: 150%;
+
+		@include abstracts.screen(lg) {
+			margin-bottom: 26px;
+		}
+	}
+
+	&__list {
+		margin-top: 19px;
+
+		@include abstracts.screen(lg) {
+			margin-top: 0;
+		}
+	}
+	.menu-column__item--active .sub-menu {
+		display: grid;
+	}
+
+	.menu-column__item--active > &__link,
+	&__item:hover > &__link {
+		color: #0071dc;
+		font-weight: 500;
+	}
+
+	&__link {
+		display: inline-block;
+		padding: 6px 0;
+		font-size: 1.4rem;
+		font-weight: 400;
+		line-height: 142.857%;
+	}
+}
+
+.sub-menu {
+	display: none;
+	grid-template-columns: repeat(3, 1fr);
+	position: absolute;
+	inset: 0 0 0 292px;
+	overflow-y: auto;
+	margin-left: 30px;
+
+	@include abstracts.screen(lg) {
+		position: initial;
+		grid-template-columns: 1fr;
+		margin: 16px 0 0 0;
+	}
+
+	&--not_main {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		position: initial;
+		inset: initial;
+		height: var(--max-inner-height);
+		margin-left: 0;
+
+		@include abstracts.screen(lg) {
+			grid-template-columns: 1fr;
+			height: auto;
+		}
+	}
+}

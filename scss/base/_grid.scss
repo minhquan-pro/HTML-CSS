@@ -1,20 +1,19 @@
 @use "sass:math";
 
 $grid-breakpoints: (
-	xs: 0,
-	sm: 576px,
-	md: 768px,
-	lg: 992px,
-	xl: 1200px,
 	xxl: 1400px,
+	xl: 1200px,
+	lg: 992px,
+	md: 768px,
+	sm: 576px,
 );
 
 $container-max-widths: (
-	sm: 540px,
-	md: 720px,
-	lg: 960px,
-	xl: 1140px,
-	xxl: 1370px,
+	sm: 100%,
+	md: 540px,
+	lg: 720px,
+	xl: 960px,
+	xxl: 1140px,
 );
 
 $gutters: (
@@ -45,6 +44,7 @@ $grid-gutter-width: 30px;
 
 .container {
 	@extend .container-fluid;
+	width: 1370px;
 }
 
 .row {
@@ -64,17 +64,13 @@ $grid-gutter-width: 30px;
 	flex: 1 0;
 }
 
-@mixin make-media-query($dimension, $bypass: false) {
-	@if $bypass {
+@mixin make-media-query($dimension) {
+	@media (max-width: ($dimension - 0.02)) {
 		@content;
-	} @else {
-		@media (min-width: $dimension) {
-			@content;
-		}
 	}
 }
 
-@mixin make-column($infix) {
+@mixin make-column($infix: null) {
 	@for $i from 1 through $grid-column {
 		.col#{$infix}-#{$i} {
 			flex: 1 0 auto;
@@ -83,7 +79,7 @@ $grid-gutter-width: 30px;
 	}
 }
 
-@mixin make-row-cols($infix) {
+@mixin make-row-cols($infix: null) {
 	@for $i from 1 through $grid-column * 0.5 {
 		.row-cols#{$infix}-#{$i} > * {
 			flex: 1 0 auto;
@@ -93,7 +89,7 @@ $grid-gutter-width: 30px;
 	}
 }
 
-@mixin make-offset($infix) {
+@mixin make-offset($infix: null) {
 	@for $i from 0 to $grid-column {
 		.offset#{$infix}-#{$i} {
 			margin-left: math.div(100%, $grid-column) * $i;
@@ -101,7 +97,7 @@ $grid-gutter-width: 30px;
 	}
 }
 
-@mixin make-gutter($infix) {
+@mixin make-gutter($infix: null) {
 	@each $i, $ratio in $gutters {
 		.g#{$infix}-#{$i} {
 			--grid-gutter-x: #{$grid-gutter-width * $ratio};
@@ -118,10 +114,17 @@ $grid-gutter-width: 30px;
 	}
 }
 
+@include make-row-cols();
+@include make-column();
+
+@include make-offset();
+
+@include make-gutter();
+
 @each $breakpoint, $dimension in $grid-breakpoints {
 	$max-width: map-get($container-max-widths, $breakpoint);
-	$infix: if($breakpoint == xs, "", "-#{$breakpoint}");
-	@include make-media-query($dimension, $breakpoint == xs) {
+	$infix: "-#{$breakpoint}";
+	@include make-media-query($dimension) {
 		.container {
 			max-width: $max-width;
 		}
