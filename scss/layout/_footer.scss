@@ -1,11 +1,19 @@
+@use "../abstracts";
+
 .footer {
-	margin-top: 30px;
+	margin-top: 45px;
 	padding: 50px 0;
+	background: var(--footer-bg);
 
 	&__row {
 		display: grid;
 		grid-template-columns: 2fr 1.3fr 1fr 1fr 1.5fr;
 		gap: 40px;
+
+		@include abstracts.screen(lg) {
+			grid-template-columns: 1fr;
+			gap: 30px;
+		}
 	}
 
 	&__desc {
@@ -19,20 +27,34 @@
 		line-height: 1.4;
 		font-size: 1.4rem;
 		font-weight: 500;
+
+		@include abstracts.screen(lg) {
+			margin-top: 25px;
+		}
 	}
 
 	&__form {
 		display: flex;
 		gap: 10px;
 		margin-top: 20px;
+
+		@include abstracts.screen(lg) {
+			gap: 30px;
+		}
 	}
 
 	&__input {
+		background: var(--footer-input-bg);
+		flex: 1;
 		padding: 8px 12px;
 		outline: none;
 		border: 2px solid #d2d1d6;
 		font-size: 1.5rem;
 		font-weight: 500;
+
+		@include abstracts.screen(lg) {
+			flex: 0;
+		}
 	}
 
 	&__heading {
@@ -42,6 +64,10 @@
 
 	&__list {
 		margin-top: 18px;
+
+		@include abstracts.screen(lg) {
+			margin-top: 10px;
+		}
 	}
 
 	&__link,
@@ -61,5 +87,73 @@
 		margin-top: 20px;
 		font-weight: 500;
 		font-size: 1.4rem;
+	}
+
+	&__bottom {
+		margin-top: 30px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		@include abstracts.screen(md) {
+			flex-direction: column-reverse;
+			gap: 50px;
+		}
+	}
+
+	&__copyright {
+		color: #9e9da6;
+		font-size: 1.4rem;
+	}
+
+	&__socials {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+	}
+
+	&__social-link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 32px;
+		height: 32px;
+		border-radius: 6px;
+		background: orange;
+		transition: transform 0.2s;
+
+		@include abstracts.screen(md) {
+			width: 40px;
+			height: 40px;
+		}
+
+		&--facebook {
+			background: #4863a9;
+		}
+
+		&--tiktok {
+			background: #000;
+		}
+
+		&--twitter {
+			background: #4999e6;
+		}
+
+		&--linkedin {
+			background: #2f71ab;
+		}
+
+		&--youtobe {
+			background: #f00;
+		}
+
+		&:hover {
+			transform: translateY(-5px);
+		}
+	}
+
+	&__social-icon {
+		width: 13px;
+		filter: var(--footer-social-bg);
 	}
 }
