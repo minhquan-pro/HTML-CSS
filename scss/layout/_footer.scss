@@ -55,6 +55,10 @@
 		@include abstracts.screen(lg) {
 			flex: 0;
 		}
+
+		@include abstracts.screen(md) {
+			flex: 1;
+		}
 	}
 
 	&__heading {
@@ -103,7 +107,8 @@
 
 	&__copyright {
 		color: #9e9da6;
-		font-size: 1.4rem;
+		font-size: 1.3rem;
+		font-weight: 500;
 	}
 
 	&__socials {
