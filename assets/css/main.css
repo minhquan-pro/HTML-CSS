@@ -1724,7 +1724,7 @@ button {
 .footer__socials {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
 }
 .footer__social-link {
   display: flex;
