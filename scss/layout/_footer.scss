@@ -16,10 +16,20 @@
 		}
 	}
 
+	&__logo.logo {
+		@include abstracts.screen(lg) {
+			margin-left: 0;
+		}
+	}
+
 	&__desc {
 		margin-top: 30px;
 		font-size: 1.4rem;
 		line-height: 1.5;
+
+		@include abstracts.screen(lg) {
+			width: min(400px, 100%);
+		}
 	}
 
 	&__help-text {

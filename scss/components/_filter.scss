@@ -229,6 +229,8 @@
 		padding-right: 30px;
 
 		@include abstracts.screen(sm) {
+			margin-top: 54px;
+
 			position: sticky;
 			bottom: 0;
 			background: var(--filter-form-bg);

@@ -40,6 +40,10 @@
 
 // Btn
 .btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
 	background: #f8f8f8;
 	height: 46px;
 	padding: 0 20px;
@@ -54,7 +58,9 @@
 	color: var(--color-btn);
 
 	+ .btn {
-		margin-left: 20px;
+		&:not(.btn__no-margin) {
+			margin-left: 20px;
+		}
 	}
 
 	&--text {

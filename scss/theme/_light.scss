@@ -43,7 +43,7 @@ html {
 	--filter-btn-color: #6c6c72;
 	--like-btn-bg: #fff;
 	--like-btn-shadow-color: rgba(124, 124, 124, 0.2);
-	--color-btn: #fff;
+	--color-btn: #1a162e;
 
 	// Filter
 	--filter-form-bg: #fff;
@@ -55,4 +55,14 @@ html {
 	--footer-bg: #eee;
 	--footer-social-bg: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(142deg)
 		brightness(101%) contrast(103%);
+
+	// Auth
+	--auth-content-bg: #fff;
+	--auth-text-color: #9e9da8;
+
+	// Form
+	--form-border-bg: #d2d1d6;
+	--form-placeholder-color: var(--form-border-bg);
+	--form-input-color: var(--color-btn);
+	--form-checkbox-label-color: var(--auth-text-color);
 }

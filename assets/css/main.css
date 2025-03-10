@@ -1639,10 +1639,20 @@ button {
     gap: 30px;
   }
 }
+@media (max-width: 991.98px) {
+  .footer__logo.logo {
+    margin-left: 0;
+  }
+}
 .footer__desc {
   margin-top: 30px;
   font-size: 1.4rem;
   line-height: 1.5;
+}
+@media (max-width: 991.98px) {
+  .footer__desc {
+    width: min(400px, 100%);
+  }
 }
 .footer__help-text {
   margin-top: 40px;
@@ -2156,6 +2166,9 @@ button {
 }
 
 .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #f8f8f8;
   height: 46px;
   padding: 0 20px;
@@ -2165,7 +2178,7 @@ button {
   user-select: none;
   color: var(--color-btn);
 }
-.btn + .btn {
+.btn + .btn:not(.btn__no-margin) {
   margin-left: 20px;
 }
 .btn--text {
@@ -2444,6 +2457,7 @@ button {
 }
 @media (max-width: 575.98px) {
   .filter__footer {
+    margin-top: 54px;
     position: sticky;
     bottom: 0;
     background: var(--filter-form-bg);
@@ -2481,6 +2495,58 @@ button {
   }
 }
 
+.form__group {
+  margin-top: 30px;
+}
+.form__group--inline {
+  display: flex;
+  align-items: center;
+}
+.form__text-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  padding: 0 12px;
+  border-radius: 1rem;
+  border: 1px solid var(--form-border-bg);
+}
+.form__text-input:focus-within {
+  border-color: #77dea6;
+}
+.form__input {
+  flex: 1;
+  height: 100%;
+  outline: none;
+  border: none;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--form-input-color);
+}
+.form__input::placeholder {
+  color: var(--form-placeholder-color);
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+.form__input-icon {
+  margin-left: 12px;
+}
+.form__pull-right {
+  margin-left: auto;
+}
+.form__checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.form__checkbox-label {
+  color: var(--form-checkbox-label-color);
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 146.667%;
+}
+
 html.dark {
   --body-bg: #292e39;
   --text-color: #fff;
@@ -2508,7 +2574,7 @@ html.dark {
   --filter-btn-color: #fff;
   --like-btn-bg: #292e39;
   --like-btn-shadow-color: rgba(124, 124, 124, 0.2);
-  --color-btn: #1a162e;
+  --color-btn: #fff;
   --filter-form-bg: #292e39;
   --filter-form-shadow: rgba(0, 0, 0, 0.4);
   --filter-form-tag-bg: #171c28;
@@ -2543,7 +2609,7 @@ html {
   --filter-btn-color: #6c6c72;
   --like-btn-bg: #fff;
   --like-btn-shadow-color: rgba(124, 124, 124, 0.2);
-  --color-btn: #fff;
+  --color-btn: #1a162e;
   --filter-form-bg: #fff;
   --filter-form-shadow: rgba(200, 200, 200, 0.4);
   --filter-form-tag-bg: #f8f8fb;
@@ -2551,6 +2617,12 @@ html {
   --footer-bg: #eee;
   --footer-social-bg: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(142deg)
   	brightness(101%) contrast(103%);
+  --auth-content-bg: #fff;
+  --auth-text-color: #9e9da8;
+  --form-border-bg: #d2d1d6;
+  --form-placeholder-color: var(--form-border-bg);
+  --form-input-color: var(--color-btn);
+  --form-checkbox-label-color: var(--auth-text-color);
 }
 @media (max-width: 991.98px) {
   html {
@@ -2594,6 +2666,85 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.auth {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.auth__intro, .auth__content {
+  flex: 1;
+}
+.auth__intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.auth__intro-text {
+  max-width: 412px;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 2.6rem;
+}
+.auth__content {
+  background: var(--auth-content-bg);
+  min-height: 100vh;
+}
+.auth__content-inner {
+  width: min(460px, 100%);
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+.auth__content-heading {
+  margin-top: 50px;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 146.667%;
+}
+.auth__content-desc {
+  margin-top: 10px;
+  padding: 0 30px;
+  color: #9e9da8;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 146.667%;
+}
+.auth__content-form {
+  width: 100%;
+  margin-top: 30px;
+}
+.auth__link {
+  color: #0071dc;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 146.667%;
+}
+.auth__btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.auth__btn {
+  width: 100%;
+  gap: 10px;
+}
+.auth__text {
+  margin-top: 108px;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 144.444%;
+  color: var(--auth-text-color);
 }
 
 /*# sourceMappingURL=main.css.map */
